@@ -1,0 +1,17 @@
+h1, p {
+    text-align: center;
+}
+
+li:hover {
+    background-color: #ff0589;
+}
+li:active {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+ul , ol {
+    list-style: none;
+}
+
+/* A cor de fundo da sua lista mude quando o cursor estiver sobre o item. */
+/* A fonte do item mude quando ele for clicado. */

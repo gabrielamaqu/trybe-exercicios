@@ -4,27 +4,41 @@
     <meta charset="UTF-8">
     <title>HTML</title>
     <style>
-        h1 {
-            font-size: 65px;
-            color:orange;
+        h1 { 
+            font-family: sans-serif, Arial;
+            font-style: italic;
         }
-         ul {
-            background-color:blueviolet;
-         }
+        p {
+            font-weight: 600;
+            font-size:3em;
+            line-height: 01cm;
+            text-align:justify;
+            text-decoration:overline;
+        }
+        body {
+            font-size:16px;
+            font-style:fantasy;
+        }
 
-         .frutas {
 
-            background-color: blue;
-         }
+        #amarelo {
+            background-color: yellow;
+        }
+        #vermelho {
+            background-color: red;
+        }
+        #marrom {
+            background-color: brown;
+        }
     </style>
   </head>
   <body>
-    <h1>Frutas</h1>
-    <p class ="frutas">Qual é a sua fruta favorita?</p>
-    <ul class ="frutas">
-      <li>Maçã</li>
-      <li>Banana</li>
-      <li>Goiaba</li>
+    <h1>Cores</h1>
+    <p>Qual é a sua cor favorita?</p>
+    <ul>
+      <li id="amarelo">Amarelo</li>
+      <li id="vermelho">Vermelho</li>
+      <li id="marrom">Marrom</li>
     </ul>
   </body>
 </html>

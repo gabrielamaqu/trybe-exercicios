@@ -1,17 +1,43 @@
-h1, p {
+div:hover{
+    border:10px solid purple;
+}
+div:nth-of-type(1) {
+    background-color:pink
+}
+div:nth-of-type(2){
+    background-color: aqua;
+}
+div:nth-of-type(3){
+    background-color: chocolate
+}
+div:nth-of-type(4){
+    background-color: blueviolet;
+}
+div:nth-of-type(5){
+    background-color: blue;
+}
+div:nth-of-type(1) >h3 {
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+}
+div:nth-of-type(2) >h3{
+    font-size: 30px;
     text-align: center;
 }
+div:nth-of-type(3) >h3{
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+    height: 150px;
 
-li:hover {
-    background-color: #ff0589;
 }
-li:active {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+div:nth-of-type(4) >h3{
+    font-size: 30px;
+    text-align: center;
 }
-
-ul , ol {
-    list-style: none;
+div:nth-of-type(5) >h3{
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
 }
-
-/* A cor de fundo da sua lista mude quando o cursor estiver sobre o item. */
-/* A fonte do item mude quando ele for clicado. */

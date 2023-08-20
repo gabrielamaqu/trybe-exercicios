@@ -1,21 +1,20 @@
-let currentHour = 8;
-message ='';
+let num1 = 8 ;
+let num2 = 9 ;
 
-if (currentHour >= 22) {
-    message ='Não deveríamos comer nada, é hora de dormir';
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
+console.log(num1 % num2);
+
+if (num1 > num2) {
+    console.log('num1 é maior');
 }
-else if (currentHour >= 18 && currentHour < 22){
-    message ='Rango da noite, vamos jantar :D';
-}
-else  if (currentHour >= 14 && currentHour < 18){
-    message ='Vamos fazer um bolo pro café da tarde?';
-}
-else if (currentHour >= 11 && currentHour < 14){
-    message ='Hora do almoço!!!';
+else if (num1 < num2) {
+    console.log('num1 é menor');
 }
 else {
-    message ='Hmmm, cheiro de café recém-passado';
-};
-
-console.log(message);
+    console.log('os numeros são iguais');
+}
+    
 

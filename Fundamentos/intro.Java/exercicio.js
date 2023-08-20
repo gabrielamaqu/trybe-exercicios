@@ -1,7 +1,14 @@
-const myname = 'Gabriela Marques'
-const birthcity = 'São Paulo'
-const birthyear ='1997'
+let grade = 95;
+let message = '';
 
-console.log(myname);
-console.log(birthcity);
-console.log(birthyear);
+if (grade >= 80) {
+    message = 'Parabéns, você faz parte do grupo de pessoas aprovadas!'
+}
+else if ( grade < 80 && grade >= 60) {
+    message ='Você está na nossa lista de espera.'
+}
+else {
+    message ='Infelizmente voce reprovou'
+};
+
+console.log(message);

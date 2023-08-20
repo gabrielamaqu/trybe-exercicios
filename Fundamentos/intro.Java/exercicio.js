@@ -1,14 +1,21 @@
-let grade = 95;
-let message = '';
+let currentHour = 8;
+message ='';
 
-if (grade >= 80) {
-    message = 'Parabéns, você faz parte do grupo de pessoas aprovadas!'
+if (currentHour >= 22) {
+    message ='Não deveríamos comer nada, é hora de dormir';
 }
-else if ( grade < 80 && grade >= 60) {
-    message ='Você está na nossa lista de espera.'
+else if (currentHour >= 18 && currentHour < 22){
+    message ='Rango da noite, vamos jantar :D';
+}
+else  if (currentHour >= 14 && currentHour < 18){
+    message ='Vamos fazer um bolo pro café da tarde?';
+}
+else if (currentHour >= 11 && currentHour < 14){
+    message ='Hora do almoço!!!';
 }
 else {
-    message ='Infelizmente voce reprovou'
+    message ='Hmmm, cheiro de café recém-passado';
 };
 
 console.log(message);
+

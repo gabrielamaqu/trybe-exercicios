@@ -1,7 +1,10 @@
 const numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-result = 0;
+let soma = 0;
 
-for (index = 0; index < numbers.length; index += 1){ 
-    result += numbers[index];
-}
-console.log(result)
+for (let index = 0; index < numbers.length; index +=1){
+    soma += numbers[index];
+};
+
+let media = soma / numbers.length;
+
+console.log(media);

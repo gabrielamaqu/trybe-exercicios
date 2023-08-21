@@ -1,6 +1,11 @@
-let fator = 10;
+    let n = 5;
+    let estrela = '*';
+    let inputLine = '';
 
-for (let index = 10; index > 0;index -=1){
-    fator *= index;
-};
-console.log(fator);
+    for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
+    inputLine = inputLine + estrela;
+    };
+
+    for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
+    console.log(inputLine);
+    };

@@ -1,13 +1,9 @@
-const menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-const menuServices = menu[1];
+const groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia', 'Macarrão'];
 
-console.log(menuServices);
+for (let index = 0; index < groceryList.length; index += 1){
+    
+    // console.log(index);
 
+    console.log(`${index}-${groceryList[index]}`);
 
-// ***********************************************************************************************************
-
-    const menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-
-    menu.push('Contato');
-
-    console.log(menu);
+}

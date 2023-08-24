@@ -1,11 +1,20 @@
-    let n = 5;
-    let estrela = '*';
-    let inputLine = '';
+// const trybeBankCustomers = ['Oliva', 'Nat', 'Gus'];
 
-    for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
-    inputLine = inputLine + estrela;
-    };
+// function addCustomer(customer){
+//     if (typeof customer != 'String'){
+//     return 'O parâmetro passado deve ser do tipo string'
+// }
+// };
+//   const type = addCustomer
 
-    for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
-    console.log(inputLine);
-    };
+//     console.log(addCustomer(type))
+
+
+
+    const trybeBankCustomers = ['Oliva', 'Nat', 'Gus'];
+
+function addCustomer(customer) {
+  if (typeof customer != 'string') {
+    return 'O parâmetro passado deve ser do tipo string!';
+  }
+} console.log(addCustomer())

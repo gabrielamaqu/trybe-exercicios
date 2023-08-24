@@ -1,13 +1,20 @@
-const menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-const menuServices = menu[1];
+// const trybeBankCustomers = ['Oliva', 'Nat', 'Gus'];
 
-console.log(menuServices);
+// function addCustomer(customer){
+//     if (typeof customer != 'String'){
+//     return 'O parâmetro passado deve ser do tipo string'
+// }
+// };
+//   const type = addCustomer
+
+//     console.log(addCustomer(type))
 
 
-// ***********************************************************************************************************
 
-    const menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+    const trybeBankCustomers = ['Oliva', 'Nat', 'Gus'];
 
-    menu.push('Contato');
-
-    console.log(menu);
+function addCustomer(customer) {
+  if (typeof customer != 'string') {
+    return 'O parâmetro passado deve ser do tipo string!';
+  }
+} console.log(addCustomer())

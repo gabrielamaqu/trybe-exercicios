@@ -1,19 +1,24 @@
-const customer = {
-  firstName: 'Roberto',
-  age: 22,
-  job: 'Software Engineer',
+const reader = {
+  name: 'Julia',
+  lastName: 'Pessoa',
+  age: 21,
+  favoriteBooks: [
+    {
+      title: 'O Senhor dos Anéis - a Sociedade do Anel',
+      author: 'J. R. R. Tolkien',
+      publisher: 'Martins Fontes',
+    },
+  ],
 };
+// console.log(`O livro favorito de ${reader.name} ${reader.lastName} se chama ${reader.favoriteBooks[0].title}`)
 
-const addProperty = (object, key, value) => {
-  if (typeof object[key] === "undefined") {
-    object[key] = value;
-  }
-};
+reader.favoriteBooks.push(
+  {
+    title: 'Harry Potter e o Prisioneiro de Azkaban',
+    author: 'JK Rowling',
+    Publisher: 'Rocco',
+  },
+)
 
-addProperty (customer, 'email', 'robertinhoengineer.com');
-addProperty (customer, 'fone', '9483s7493');
-addProperty (customer, 'userGithub', 'robertohub');
-addProperty (customer, 'linkedIn', 'Roberto The Engineer');
-
-console.log(customer)
+console.log(`${reader.name} tem ${reader.favoriteBooks.length} livros favoritos`)
 

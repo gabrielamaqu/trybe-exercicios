@@ -1,17 +1,19 @@
-const player = {
-name :'Marta',
-lastName : 'Silva',
-age : 34,
-medals : { golden: 2, silver: 3 },
-bestInTheWorld : [2006, 2007, 2008, 2009, 2010, 2018],
-}
+const customer = {
+  firstName: 'Roberto',
+  age: 22,
+  job: 'Software Engineer',
+};
 
-let message = `A jogadora ${player.name} ${player.lastName} tem ${player.age} anos de idade.`;
+const addProperty = (object, key, value) => {
+  if (typeof object[key] === "undefined") {
+    object[key] = value;
+  }
+};
 
-let achievements = `A jogadora ${player.name} ${player.lastName} foi eleita a melhor do mundo por ${player['bestInTheWorld'].length} vezes.`;
+addProperty (customer, 'email', 'robertinhoengineer.com');
+addProperty (customer, 'fone', '9483s7493');
+addProperty (customer, 'userGithub', 'robertohub');
+addProperty (customer, 'linkedIn', 'Roberto The Engineer');
 
-console.log(achievements);
+console.log(customer)
 
-console.log(message);
-
-console.log(player);

@@ -1,60 +1,74 @@
-const order = {
-  name: 'Rafael Andrade',
-  phoneNumber: '11-98763-1416',
-  address: {
-    street: 'Rua das Flores',
-    number: '389',
-    apartment: '701',
-  },
-  order: {
-    pizza: {
-      marguerita: {
-        amount: 1,
-        price: 25,
-      },
-      pepperoni: {
-        amount: 1,
-        price: 20,
-      },
+const school = {
+  lessons: [
+    {
+      course: 'Python',
+      students: 20,
+      professor: 'Carlos Patrício',
+      shift: 'Manhã',
     },
-    drinks: {
-      coke: {
-        type: 'Coca-Cola Zero',
-        price: 10,
-        amount: 1,
-      },
+    {
+      course: 'Kotlin',
+      students: 10,
+      professor: 'Gabriel Oliva',
+      shift: 'Noite',
     },
-    delivery: {
-      deliveryPerson: 'Ana Silveira',
-      price: 5,
+    {
+      course: 'JavaScript',
+      students: 738,
+      professor: 'Gustavo Caetano',
+      shift: 'Tarde',
     },
-  },
-  payment: {
-    total: 60,
-  },
+    {
+      course: 'MongoDB',
+      students: 50,
+      shift: 'Noite',
+    },
+  ]
+}
+
+const position = (object, index) => Object.values(object)[index];
+console.log(position(school, 0));
+
+
+const students = (object) => {
+  let count = 0;
+  for (let index = 0; index < object.lessons.length; index += 1) {
+    count += object.lessons[index].students;
+  }
+  return count;
+}
+console.log(students(school));
+
+
+const verify = (obj, key) => {
+  for (let index = 0; index < obj.lessons.length; index += 1) {
+    if (obj.lessons[index][key] === undefined) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(verify(school, 'nota')); 
+
+
+
+const changeshift = (object, course, value) => {
+  let findCourse;
+  for (let index = 0; index < object.lessons.length; index += 1) {
+    let element = object.lessons[index];
+    if (element.course === course) {
+      findCourse = element;
+      break;
+    }
+  }
+
+
+  if (findCourse !== undefined) {
+    findCourse.shift = value;
+    return findCourse;
+  } else {
+    return 'Curso não encontrado.';
+  }
 };
 
-const customerInfo = (fullOrder) => {
-  const delivery = fullOrder.order.delivery.deliveryPerson;
-  const costumer = fullOrder.name;
-  const phoneNumber = fullOrder.phoneNumber;
-  const street = fullOrder.address.street;
-  const streetnumber = fullOrder.address.number;
-  const apnumber = fullOrder.address.apartment;
-
-  return `Olá ${delivery}, entrega para ${costumer}, Telefone: ${phoneNumber}, ${street}, ${streetnumber}, AP:${apnumber}.`
-
-}
-
-console.log(customerInfo(order));
-
-const orderModifier = (fullOrder) => {
-  fullOrder.name = 'Luiz Silva';
-  fullOrder.payment.toral = 50;
-
-  const pedido = Object.keys(fullOrder.order.pizza).join(', ');
-
-  return `Olá ${fullOrder.name}, o valor total de seu pedido de ${pedido} e ${fullOrder.order.drinks.coke.type} é R$${fullOrder.payment.total},00`;
-}
-
-console.log(orderModifier(order));
+console.log(changeshift(school, 'Python', 'Noite'));

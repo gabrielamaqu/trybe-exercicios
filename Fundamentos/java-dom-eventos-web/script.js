@@ -1,32 +1,33 @@
-// 1 *** Recupere o elemento que contém o título da página e altere para o nome de um filme da sua escolha.
+// 1 *** Altere a cor de fundo do header para rgb(0, 176, 105);
 
-const title = document.getElementById('page-title');
-title.innerText = 'VIVA! A VIDA É UMA FESTA!'
+const headColor = document.getElementById ('header-container');
+headColor.style.background = 'rgb(0, 176, 105)';
 
-// 2 *** Recupere o primeiro parágrafo e altere o texto para o resumo do seu filme favorito.
+// 2 *** Altere a cor de fundo da div das tarefas que são Urgentes e Importantes para rgb(255, 159, 132);
 
-const paragraph = document.getElementById('first-paragraph');
-paragraph.innerText = 'Apesar da proibição da música por gerações de sua família, o jovem Miguel sonha em se tornar um músico talentoso como seu ídolo Ernesto de la Cruz. Desesperado para provar seu talento, Miguel se encontra na deslumbrante e colorida Terra dos Mortos. Depois de conhecer um charmoso malandro chamado Héctor, os dois novos amigos embarcam em uma jornada extraordinária para desvendar a verdadeira história por trás da história da família de Miguel.'
+const urgentAndImportant = document.getElementsByClassName('emergency-tasks')[0];
+urgentAndImportant.style.background = 'rgb(255, 159, 132)';
 
-// 3 *** Recupere o subtítulo e altere-o para: Principais informações.
- 
-const subtitle = document.getElementById('subtitle');
-subtitle.innerText = 'Principais informações';
+// 3 *** Altere a cor de fundo do título das tarefas que são Urgentes e Importantes para rgb(165, 0, 243);
 
-// 4 *** Recupere os parágrafos usando getElementsByClassName, e altere a fonte do primeiro parágrafo para itálico.
+const urgentAndNotImportant = document.querySelectorAll('.emergency-tasks h3');
+for (index = 0; index < urgentAndNotImportant.length; index +=1) {
+    urgentAndNotImportant[index].style.backgroundColor = 'rgb(165, 0, 243)';
+}
 
-const paragraphs = document.getElementsByClassName('paragraph-style');
-const firstParagraph = paragraphs[0];
-firstParagraph.style.fontStyle = 'italic';
+// 4 *** Altere a cor de fundo da div das tarefas que não são Urgentes e Importantes para rgb(249, 219, 94);
 
-// 5 *** Recupere o segundo parágrafo e coloque as informações principais: Exemplo: Direção: Nome da pessoa que dirigiu o filme, 
-// Roteirista: Nome da(s) pessoa(s) responsável(is) pelo roteiro
+const notUrgentAndImportant = document.querySelector('.no-emergency-tasks');
+notUrgentAndImportant.style.backgroundColor = 'rgb(249, 219, 94)';
 
-const secondParagraph = document.getElementById('second-paragraph');
-secondParagraph.innerText = 'Data de lançamento: 4 de janeiro de 2018 (Brasil) //  Diretores: Adrian Molina, Lee Unkrich // Autores: Adrian Molina, Lee Unkrich, Matthew Aldrich, Jason Katz'
+// 5 *** Altere a cor de fundo do título das tarefas que não são Urgentes e Importantes para rgb(35, 37, 37);
 
-// 6 *** Recupere o subtítulo utilizando o getElementsByTagName e altere a cor da fonte para alguma de sua escolha.
+const notUrgent = document.querySelectorAll('.no-emergency-tasks h3');
+for (index = 0; index < notUrgent.length; index +=1) {
+    notUrgent[index].style.background = 'rgb(35, 37, 37)';
+}
 
-const backgroundColor = document.getElementsByTagName('h2');
-backgroundColor[0].style.color = 'pink';
+// 6 *** Altere a cor de fundo do footer para rgb(0, 53, 51).
 
+const baseboard = document.querySelector('#footer-container');
+baseboard.style.background = 'rgb(0, 53, 51)';

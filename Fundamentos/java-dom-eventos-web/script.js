@@ -1,33 +1,54 @@
-// 1 *** Altere a cor de fundo do header para rgb(0, 176, 105);
+const firstLi = document.getElementById('first-li');
+const secondLi = document.getElementById('second-li');
+const thirdLi = document.getElementById('third-li');
+const input = document.getElementById('input');
+const myWebpage = document.getElementById('my-spotrybefy');
 
-const headColor = document.getElementById ('header-container');
-headColor.style.background = 'rgb(0, 176, 105)';
 
-// 2 *** Altere a cor de fundo da div das tarefas que são Urgentes e Importantes para rgb(255, 159, 132);
+// 1. Copie esse arquivo e edite apenas ele.
+// 1.1. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
 
-const urgentAndImportant = document.getElementsByClassName('emergency-tasks')[0];
-urgentAndImportant.style.background = 'rgb(255, 159, 132)';
+// 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando este for clicado.
+// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como é possível fazer isso? Dica: Lembre-se do método `.classList.remove`.
 
-// 3 *** Altere a cor de fundo do título das tarefas que são Urgentes e Importantes para rgb(165, 0, 243);
-
-const urgentAndNotImportant = document.querySelectorAll('.emergency-tasks h3');
-for (index = 0; index < urgentAndNotImportant.length; index +=1) {
-    urgentAndNotImportant[index].style.backgroundColor = 'rgb(165, 0, 243)';
+const handleChangeTech = (event) => {
+    const techElement = document.querySelector('.tech');
+    techElement.classList.remove('tech');
+    event.target.classList.add('tech');
+    input.value = '';
 }
 
-// 4 *** Altere a cor de fundo da div das tarefas que não são Urgentes e Importantes para rgb(249, 219, 94);
+firstLi.addEventListener('click', handleChangeTech);
+secondLi.addEventListener('click', handleChangeTech);
+thirdLi.addEventListener('click', handleChangeTech);
 
-const notUrgentAndImportant = document.querySelector('.no-emergency-tasks');
-notUrgentAndImportant.style.backgroundColor = 'rgb(249, 219, 94)';
+// 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
+// com a classe 'tech'.
 
-// 5 *** Altere a cor de fundo do título das tarefas que não são Urgentes e Importantes para rgb(35, 37, 37);
+input.addEventListener('input', (event) => {
+    const techElement = document.querySelector('.tech');
+    techElement.innertext = event.target.value;
+})
 
-const notUrgent = document.querySelectorAll('.no-emergency-tasks h3');
-for (index = 0; index < notUrgent.length; index +=1) {
-    notUrgent[index].style.background = 'rgb(35, 37, 37)';
-}
+// 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy',
+// redirecione para alguma página.
+// 4.1. Que tal redirecionar para seu portfólio? Dica: Lembre-se dos métodos `window.location.replace` e `window.open`.
 
-// 6 *** Altere a cor de fundo do footer para rgb(0, 53, 51).
+myWebpage.addEventListener('dbclick', () => {
+    window.location.replace('https://open.spotify.com/?');
+});
 
-const baseboard = document.querySelector('#footer-container');
-baseboard.style.background = 'rgb(0, 53, 51)';
+// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
+// a cor do mesmo.  
+
+myWebpage.addEventListener('mouseout', (event) => {
+    event.target.style.color = 'red';
+});
+
+myWebpage.addEventListener('mouseout', (event) => {
+    EventTarget.target.style.color = 'unsset'
+});
+
+// Não precisa passar o parâmetro dentro da callback resetText. O próprio
+// navegador fará esse trabalho por você, não é legal? Desse jeito, o
+// event.target na função retornará o objeto 'firstLi'.

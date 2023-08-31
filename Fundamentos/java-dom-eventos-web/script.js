@@ -1,6 +1,7 @@
 //  1 *** Adicione a tag h1 com o texto TrybeTrip - Agência de Viagens como filho da tag body;
 const son = document.getElementById('corpo');
 const son1 = document.createElement('h1');
+son1.classList.add('title');
 son1.innerText = 'TrybeTrip - Agência de Viagens';
 son.appendChild(son1);
 
@@ -53,5 +54,15 @@ right.appendChild(lista);
 // 9 *** Adicione 3 tags h3, todas filhas do main criado no passo 2.
 for ( let index = 0; index < 3; index += 1) {
     const tag = document.createElement('h3');
+    tag.classList.add('description')
     main1.appendChild(tag);
 };
+
+// ********* BONUS *********
+// *** Adicione a classe title na tag h1 criada;     FEITO
+
+// ***Adicione a classe description nas 3 tags h3 criadas;
+
+
+
+

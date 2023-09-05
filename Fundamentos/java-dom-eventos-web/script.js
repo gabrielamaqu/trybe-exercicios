@@ -59,9 +59,10 @@ for ( let index = 0; index < 3; index += 1) {
 };
 
 // ********* BONUS *********
+
 // *** Adicione a classe title na tag h1 criada;     FEITO
 
-// ***Adicione a classe description nas 3 tags h3 criadas;
+// ***Adicione a classe description nas 3 tags h3 criadas;     FEITO
 
 
 

@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "name": "secao-03-intro-css",
+  "version": "1.0.0",
+  "main": "removeItem.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

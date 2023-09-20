@@ -1,19 +1,22 @@
-const inputText = document.querySelector("#input-text");
-const inputCheckbox = document.querySelector("#input-checkbox");
-const hrefLink = document.querySelector("#href");
+const validateInfo = (name, age) => {
+  if (!name || !age) {
+    throw new Error ('Todas as informações são necessárias')
+  }
+};
 
+const validateAge = (age) => {
+  if (age < 18) {
+    throw new Error ('Ops, infelizmente nesse momento você não pode fazer as aulas');
+  }
+};
 
-hrefLink.addEventListener("click", function(event) {
-    event.preventDefault();
-});
-
-inputCheckbox.addEventListener("click", function(check) {
-    check.preventDefault();
-});
-
-inputText.addEventListener("keypress", function(event) {
-    if (event.key === "a") {
-        event.preventDefault();
-        console.log(event)
-    }
-});
+const studentRegister = (name, age) => {
+  try {
+    validateInfo(name, age);
+    validateAge(age);
+    return `${name} boas vindas à AuTrybe!`;
+  } catch (error) {
+    return error.message;
+  }
+};
+console.log(studentRegister("Carlos"))

@@ -1,90 +1,36 @@
-// const { number } = require("yargs");
-
-const { name } = require("ci-info");
-
-// // Exercicio 1 - Temperaturas em graus Celsius
-
-const temperaturesCelsius = [23, 10, 32, 21, 47];
-
-const tempetures = temperaturesCelsius.map((celsius) => (celsius * 9/5) + 32)
-
-console.log(tempetures)
+// Exercício 1
+// O array de objetos people, contêm elementos que representam pessoas com as propriedades name e age.
+//  Utilize o método filter para filtrar as pessoas que têm a idade igual ou superior a 30.
 
 
-// Implemente a função formatedBookNames que deve retornar um array de strings no formato: Nome do livro - Gênero - Nome da pessoa autora.
+const people = [
+    { name: 'João', age: 25 },
+    { name: 'Maria', age: 30 },
+    { name: 'Pedro', age: 20 },
+    { name: 'Ana', age: 35 },
+  ];
 
-const infoBooks = {
-  books: [
-    {
-      id: 1,
-      name: 'As Crônicas de Gelo e Fogo',
-      genre: 'Fantasia',
-      author: {
-        name: 'George R. R. Martin',
-        birthYear: 1948,
-      },
-      releaseYear: 1991,
-    },
-    {
-      id: 2,
-      name: 'O Senhor dos Anéis',
-      genre: 'Fantasia',
-      author: {
-        name: 'J. R. R. Tolkien',
-        birthYear: 1892,
-      },
-      releaseYear: 1954,
-    },
-    {
-      id: 3,
-      name: 'Fundação',
-      genre: 'Ficção Científica',
-      author: {
-        name: 'Isaac Asimov',
-        birthYear: 1920,
-      },
-      releaseYear: 1951,
-    },
-    {
-      id: 4,
-      name: 'Duna',
-      genre: 'Ficção Científica',
-      author: {
-        name: 'Frank Herbert',
-        birthYear: 1920,
-      },
-      releaseYear: 1965,
-    },
-    {
-      id: 5,
-      name: 'A Coisa',
-      genre: 'Terror',
-      author: {
-        name: 'Stephen King',
-        birthYear: 1947,
-      },
-      releaseYear: 1986,
-    },
-  ],
-};
+const result = people.filter((adult) => adult.age >= 30);
 
-const formatedBookNames = () => {
-   const map = infoBooks.books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`)
-   return map
-}
+console.log(result)
 
-// Exercício 4
-// Implemente a função nameAndAge que deve retornar um array de objetos, cada objeto deve conter:
-
-// A chave author, e o valor deve ser o nome da pessoa autora;
-// A chave age, e o valor deve ser a idade da pessoa autora quando lançou o livro.
+// Exercício 2
+// Considere o seguinte array de objetos que representa uma lista de jogadores de basquete:
+// Utilizando o método filter e array destructuring, crie uma função filterHighPlayers que retorna um novo array contendo 
+// apenas os jogadores com altura igual ou superior a 200 centímetros.
 
 
-const nameAndAge = () => {
-    return books.map((book) => (
-        {
-            author: book.author.name,
-            age:book.releaseYear - book.author.birthYear
-        }
-    ))
-}
+
+const players = [
+    { name: 'Michael Jordan', height: 198, team: 'Chicago Bulls' },
+    { name: 'LeBron James', height: 203, team: 'Los Angeles Lakers' },
+    { name: 'Kobe Bryant', height: 198, team: 'Los Angeles Lakers' },
+    { name: 'Stephen Curry', height: 191, team: 'Golden State Warriors' },
+    { name: 'Kevin Durant', height: 211, team: 'Brooklyn Nets' },
+  ];
+
+  const filterHighPlayers = () => {
+    const result = players.filter((player) => player.height >= 200);
+    return result
+  } 
+console.log(filterHighPlayers())
